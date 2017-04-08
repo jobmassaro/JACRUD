@@ -1,0 +1,5 @@
+domain/Course_.class
+service/ApplicationConfig.class
+service/AbstractFacade.class
+service/CourseFacadeREST.class
+domain/Course.class

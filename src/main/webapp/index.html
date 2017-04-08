@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="demo">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="dist/css/bootstrap.css" rel="stylesheet" />
+    </head>
+    <body class="container" ng-controller="DemoCtrl">
+        <div>
+            <h1>REST-ANGULARJS - </h1>
+        </div>
+        <table class="table table-striped"> 
+            <caption>Optional table caption.</caption> 
+            <thead> 
+                <tr> 
+                    <th>#</th> 
+                    <th>First Name</th> 
+                    <th>Last Name</th> 
+                    <th>Username</th> 
+                    <th>Action</th> 
+                </tr> 
+            </thead> 
+            <tbody> 
+                <tr ng-repeat="item in items"> 
+                    <th scope="row">{{ item.id }}</th>
+                    <td>{{item.name}}</td> 
+                    <td>{{ item.duration}}</td>
+                    <td>{{ item.fee}}</td>
+                    <td><button class="btn btn-danger btn-lg" ng-click="deleteItem(item)">DELETE</button></td>
+                    <td><button class="btn btn-primary btn-lg" ng-click="addItem(item)">CREATE</button></td>
+                </tr> 
+            </tbody> 
+        </table>
+        
+        
+            <form ng-if="show">
+                <div class="form-group">
+                  <label for="email">Name:</label>
+                  <input type="text" class="form-control" id="name" ng-model="data.name">
+                </div>
+                <div class="form-group">
+                  <label for="pwd">Durata</label>
+                   <input type="text" class="form-control" id="name" ng-model="data.duratrion">
+                </div>
+                <div class="checkbox">
+                  <label for="pwd">Costo</label>
+                   <input type="text" class="form-control" id="fee" ng-model="data.fee">
+                </div>
+                <button type="submit" class="btn btn-default" ng-click="createItem(data)">ADD</button>
+            </form>
+
+        
+        
+       <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="dist/js/angular.js"></script>
+        <script src="dist/js/demo.js"></script>
+    </body>
+</html>
